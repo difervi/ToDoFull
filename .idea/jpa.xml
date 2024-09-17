@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaBuddyIdeaProjectConfig" migrateIndexesAndConstraints="true">
+    <option name="migrateIndexesAndConstraints" value="true" />
+    <option name="reLastEntityCreationPackage" value="backend/src/main/java/com/todo/entities" />
+    <option name="reverseEngineeringLastDbConnectionId" value="cafeb6a9-fa58-4144-8851-97e68c83e74b" />
+  </component>
+</project>
