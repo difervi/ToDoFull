@@ -12,4 +12,6 @@ public class TaskDto {
     private boolean completed;
 
 
+    public void setDueDate(String dueDate) {
+    }
 }

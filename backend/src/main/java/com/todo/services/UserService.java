@@ -20,8 +20,14 @@ public class UserService {
         this.userRepository = userRepository;
         this.userMapper = userMapper;
     }
+    public boolean userExistByEmail(String email) {
+        return userRepository.existsByEmail(email);
+    }
 
     public UserDto createUser(UserCreateDto userCreateDto) {
+        if (userExistByEmail(userCreateDto.getEmail())) {
+            throw new RuntimeException("User already exists");
+        }
         User user = userMapper.toUser(userCreateDto);
         user.setPassword(userCreateDto.getPassword());
         userRepository.save(user);

@@ -2,7 +2,6 @@ package com.todo.controllers;
 
 import com.todo.dtos.UserCreateDto;
 import com.todo.dtos.UserDto;
-import com.todo.entities.User;
 import com.todo.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +24,7 @@ public class UserController {
         return userService.findById(id);
     }
     @GetMapping("/email")
-    public UserDto getUserByEmail(@PathVariable String email) {
+    public UserDto getUserByEmail(@RequestParam String email) {
         return userService.findByEmail(email);
     }
 
