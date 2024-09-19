@@ -21,8 +21,10 @@ public class UserController {
 
     @GetMapping("/{id}")
     public UserDto getUserById(@PathVariable Long id) {
-        return userService.findById(id);
+        return userService.findById(id); // Pending check why the password is showing when we get the user by id
     }
+
+
     @GetMapping("/email")
     public UserDto getUserByEmail(@RequestParam String email) {
         return userService.findByEmail(email);

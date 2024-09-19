@@ -1,19 +1,21 @@
 package com.todo.dtos;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Getter
+@Setter
 public class UserDto {
     private Long id;
     private String name;
     private String email;
-    @Getter
-    private String password;
 
+    public void setUsername(String s) {
+    }
+
+    public String getUsername() {
+        return name;
+    }
 }
